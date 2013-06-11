@@ -9,6 +9,8 @@ class YoutubeAudio < Goliath::API
 
     def self.cmd(url)
       "sh -c \"curl -s '#{url}' -H 'Connection: keep-alive' -H 'Cache-Control: no-cache' \""
+      #"sh -c \"curl -s '#{url}' -H 'Connection: keep-alive' -H 'Cache-Control: no-cache' | ffmpeg -i - -vn -f mp3 \""
+      #FIXME:  The audio stream I have doesn't work on mobile when visiting the link directly (as opposed to pulling the source in with an audio tag)
     end
 
     #EM#receive_data - Generally called by the event loop whenever data has been received by the network connection, but since we are using popen, it will be called whenever data is received by the process
