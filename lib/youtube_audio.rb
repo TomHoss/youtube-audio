@@ -39,6 +39,7 @@ class YoutubeAudio < Goliath::API
 
   def response(env)
     return [404, {}, "Not found"] if env["PATH_INFO"] == "/favicon.ico"
+    return [200, {}, "<html><body><p>Test!</p><audio src='/?v=fJ9rUzIMcZQ' controls autoplay></audio></body></html>"] if env["PATH_INFO"] == "/test"
 
     puts "Fetching video=#{params['v']}"
     video_url = Url.new(params['v']).video_url
