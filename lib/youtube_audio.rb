@@ -11,8 +11,6 @@ class YoutubeAudio < Goliath::API
       puts "logging"
       puts `sh -c 'echo $PATH'`
       puts `pwd`
-      puts `ls vendor/ffmpeg/bin`
-      puts `./vendor/ffmpeg/bin/ffmpeg`
       puts `ffmpeg`
       puts `sh -c 'which ffmpeg'`
       puts `which ffmpeg`
