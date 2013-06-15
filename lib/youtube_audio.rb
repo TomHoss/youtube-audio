@@ -9,10 +9,10 @@ class YoutubeAudio < Goliath::API
 
     def self.cmd(url)
       puts "logging"
-      puts "sh -c 'echo $PATH'"
-      puts "ffmpeg"
-      puts "sh -c 'which ffmpeg'"
-      puts "which ffmpeg"
+      puts `sh -c 'echo $PATH'`
+      puts `ffmpeg`
+      puts `sh -c 'which ffmpeg'`
+      puts `which ffmpeg`
       puts "---"
       "sh -c \"curl -s '#{url}' -H 'Connection: keep-alive' -H 'Cache-Control: no-cache' | ffmpeg -i - -vn -f mp3 - \""
     end
