@@ -10,5 +10,5 @@ Requires:
 Requires.private: libavfilter = 3.77.101, libavformat = 55.8.102
 Conflicts:
 Libs: -L${libdir} -lavdevice 
-Libs.private: -ldl -lm -pthread -lbz2 -lz -lrt
+Libs.private: -ldl -lmp3lame -lm -pthread -lbz2 -lz -lrt
 Cflags: -I${includedir}

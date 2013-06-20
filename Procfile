@@ -1,1 +1,1 @@
-web: bundle exec ruby bin/youtube-audio.rb -sv -p $PORT
+web: bundle exec ruby youtube-audio.rb -sv -p $PORT

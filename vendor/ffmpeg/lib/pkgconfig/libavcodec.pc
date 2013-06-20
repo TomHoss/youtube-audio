@@ -10,5 +10,5 @@ Requires:
 Requires.private: libavutil = 52.35.101
 Conflicts:
 Libs: -L${libdir} -lavcodec 
-Libs.private: -ldl -lm -pthread -lbz2 -lz -lrt
+Libs.private: -ldl -lmp3lame -lm -pthread -lbz2 -lz -lrt
 Cflags: -I${includedir}
